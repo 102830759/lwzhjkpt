@@ -1,0 +1,36 @@
+server:
+  port: 8118
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:8762/eureka/
+
+spring:
+  application:
+    name: lwzhjkpt-service
+  datasource:
+    url: jdbc:postgresql://192.168.0.123:5432/ncdb
+    username: ncdb
+    password: ncdb
+    driver-class-name: org.postgresql.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      filters: stat,logging
+      initial-size: 8
+      min-idle: 3
+      max-active: 10
+      query-timeout: 6000
+      transaction-query-timeout: 6000
+      remove-abandoned-timeout: 1800
+      max-wait: 60000
+      time-between-eviction-runs-millis: 60000
+      min-evictable-idle-time-millis: 300000
+      test-while-idle:  true
+      test-on-borrow: false
+      test-on-return: false
+#日志
+logging:
+  config: classpath:logback.xml
+  path: C:/log
+debug: true

@@ -1,0 +1,12 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd ">
+
+    <bean id="SDService" class="com.hdsx.server.sd.impl.SDServiceImpl"/>
+    <bean name="com.hdsx.api.sd.service.SDService" class="org.springframework.remoting.caucho.HessianServiceExporter">
+        <property name="service" ref="SDService"/>
+        <property name="serviceInterface" value="com.hdsx.api.sd.service.SDService"/>
+    </bean>
+
+
+</beans>

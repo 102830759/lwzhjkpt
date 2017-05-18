@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "/xsd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hdsx.server.sd.mapper.SDMapper">
+    <!--字段-->
+    <sql id="column">
+        ID,SDDM,SDMC,ROADCODE,ROADNAME
+    </sql>
+
+    <!--根据id查询详情-->
+    <select id="queryOne" parameterType="String" resultType="Sd">
+        SELECT DISTINCT
+        <include refid="column"/>
+        FROM GL_SD WHERE SDDM = #{sddm,jdbcType=VARCHAR}
+    </select>
+
+    <select id="queryList" resultType="Sd">
+        SELECT <include refid="column" /> FROM GL_SD
+    </select>
+
+</mapper>
