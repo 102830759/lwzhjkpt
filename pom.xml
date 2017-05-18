@@ -400,7 +400,7 @@
 		</dependencies>
 	</dependencyManagement>
 	<build>
-		<finalName>geoshare3</finalName>
+		<finalName>lwzhjkpt</finalName>
 		<!-- mybatis 项目需要加上resources这段配置，maven会自动过滤src/main/java中的配置文件 -->
 		<resources>
 			<resource>
@@ -422,6 +422,10 @@
 			</extension>
 		</extensions>
 		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
@@ -494,14 +498,5 @@
 			</plugin>
 		</plugins>
 	</build>
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
-		</plugins>
-	</build>
-
 
 </project>

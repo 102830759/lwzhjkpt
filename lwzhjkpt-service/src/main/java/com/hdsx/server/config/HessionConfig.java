@@ -2,7 +2,8 @@ package com.hdsx.server.config;
 
 
 import com.hdsx.hession.servlet.HessianHttpRequestHandlerServlet;
-import org.springframework.boot.web.servlet.ServletRegistrationBean;
+
+import org.springframework.boot.context.embedded.ServletRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.ImportResource;
