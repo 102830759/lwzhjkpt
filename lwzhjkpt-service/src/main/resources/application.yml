@@ -29,6 +29,10 @@ spring:
       test-while-idle:  true
       test-on-borrow: false
       test-on-return: false
+mybatis:
+  mapperLocations: classpath:/mybatis/xml/*.xml
+  typeAliasesPackage: com.hdsx.api.sd.vo
+  config-location: classpath:mybatis-config.xml
 #日志
 logging:
   config: classpath:logback.xml

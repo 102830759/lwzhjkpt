@@ -35,7 +35,7 @@ public class DruidConfig {
   @Bean
   public ServletRegistrationBean druidServlet() {
     ServletRegistrationBean servletRegistrationBean = new ServletRegistrationBean(
-        new StatViewServlet(), "/druid/*");
+            new StatViewServlet(), "/druid/routine/*");
     //白名单：
     servletRegistrationBean.addInitParameter("allow", "127.0.0.1");
     //IP黑名单 (存在共同时，deny优先于allow) : 如果满足deny的话提示:Sorry, you are not permitted to view this page.
@@ -57,8 +57,7 @@ public class DruidConfig {
     filterRegistrationBean.setFilter(new WebStatFilter());
     filterRegistrationBean.addUrlPatterns("/*");
     filterRegistrationBean
-        .addInitParameter("exclusions", "*.js,*.gif,*.jpg,*.png,*.css,*.ico,/druid/*");
+            .addInitParameter("exclusions", "*.js,*.gif,*.jpg,*.png,*.css,*.ico,/druid/*");
     return filterRegistrationBean;
   }
-
 }
