@@ -52,7 +52,7 @@
         </dependency>
 		<dependency>
 			<groupId>com.hdsx.api</groupId>
-			<artifactId>lwzhjkot-api</artifactId>
+			<artifactId>lwzhjkpt-api</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 	</dependencies>
